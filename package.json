@@ -1,0 +1,30 @@
+{
+  "name": "fuzzaldrin-plus-fast-test",
+  "version": "1.0.0",
+  "description": "Test package for prebuilt binaries of fuzzaldrin-plus-fast",
+  "main": "index.js",
+  "scripts": {
+    "benchmark:regular": "node benchmark/benchmark.js",
+    "benchmark:large": "node benchmark/benchmark-large.js",
+    "benchmark:small": "node benchmark/benchmark-small.js",
+    "benchmark": "npm run benchmark:small && npm run benchmark:regular && npm run benchmark:large",
+    "bump": "ncu -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajendrant/fuzzaldrin-plus-fast-test.git"
+  },
+  "author": "Raj T",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajendrant/fuzzaldrin-plus-fast-test/issues"
+  },
+  "homepage": "https://github.com/rajendrant/fuzzaldrin-plus-fast-test#readme",
+  "dependencies": {
+    "bump": "^0.2.5",
+    "fuzzaldrin-plus": "^0.6.0",
+    "fuzzaldrin-plus-fast": "^0.12.3",
+    "npm-check-updates": "8.0.3",
+    "shx": "^0.3.2"
+  }
+}

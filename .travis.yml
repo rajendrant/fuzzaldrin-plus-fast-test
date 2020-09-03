@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- node
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-multilib
+    - g++-multilib
+os:
+- osx
+- linux
+- windows
+after_script:
+- npm run benchmark

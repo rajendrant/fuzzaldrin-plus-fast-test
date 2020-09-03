@@ -1,0 +1,23 @@
+# https://www.appveyor.com/docs/appveyor-yml/
+build: off
+
+skip_branch_with_pr: true
+skip_non_tags: true
+
+environment:
+  matrix:
+    - nodejs_version: "Current"
+
+configuration: Release
+platform:
+  - x86
+  - x64
+
+install:
+  - ps: Install-Product node $env:nodejs_version $env:platform
+  - node --version
+  - npm --version
+  - npm install
+
+test_script:
+  - npm run benchmark
